@@ -357,8 +357,12 @@ def rollout(
     }
 
 
-def evidence_revision(family: str, trajectories: list[dict[str, Any]]) -> str:
-    base = BASE_CARDS[family]
+def evidence_revision(
+    family: str,
+    trajectories: list[dict[str, Any]],
+    base_card: str | None = None,
+) -> str:
+    base = base_card or BASE_CARDS[family]
     successful = [trajectory for trajectory in trajectories if trajectory["reward"]]
     failed = [trajectory for trajectory in trajectories if not trajectory["reward"]]
     additions: list[str] = []
@@ -373,7 +377,7 @@ def evidence_revision(family: str, trajectories: list[dict[str, Any]]) -> str:
             additions.append(
                 f"Recent failures overused “{repeated[0][0]}”; change location or prerequisite after repeated feedback."
             )
-    return " ".join([base, *additions])[:700]
+    return " ".join([base, *additions])[:1500]
 
 
 def diversity_summary(groups: list[list[dict[str, Any]]]) -> dict[str, float]:
@@ -612,7 +616,7 @@ def main() -> None:
             group_success = float(np.mean([item["reward"] for item in group]))
             competence[family] = 0.5 * competence[family] + 0.5 * group_success
             if run_config["condition"] in {"adaptive", "adaptive_retain"}:
-                cards[family] = evidence_revision(family, group)
+                cards[family] = evidence_revision(family, group, cards[family])
             if (
                 run_config["condition"] == "adaptive"
                 and bool(run_config["adaptive_remove"])
