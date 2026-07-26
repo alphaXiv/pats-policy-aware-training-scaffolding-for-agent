@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pats-{{ORX_RUN}}
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: run
+          image: pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime
+          command: ["bash", "-c", "$ORX_SCRIPT"]
+          resources:
+            requests:
+              nvidia.com/gpu: "1"
+              cpu: "8"
+              memory: "48Gi"
+            limits:
+              nvidia.com/gpu: "1"
+              cpu: "8"
+              memory: "48Gi"
