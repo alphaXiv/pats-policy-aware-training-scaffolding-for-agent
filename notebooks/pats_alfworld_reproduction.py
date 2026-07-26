@@ -271,6 +271,34 @@ def _(mo):
 
 
 @app.cell
+def _(mo, results):
+    _campaigns = [
+        ("0.00", "threshold_0.00"),
+        ("0.10", "threshold_0.10"),
+        ("0.15", "threshold_0.15"),
+        ("0.20", "threshold_0.20"),
+        ("0.25", "primary"),
+    ]
+    _threshold_rows = []
+    for _threshold, _campaign in _campaigns:
+        _item = results["aggregates"][_campaign]["adaptive"]
+        _threshold_rows.append(
+            {
+                "Removal threshold": _threshold,
+                "Scaffold-free success": (
+                    f"{100 * _item['heldout_scaffold_free_success']['mean']:.2f}%"
+                ),
+                "Successes / episodes": (
+                    f"{_item['success_count']} / {_item['evaluation_episodes']}"
+                ),
+                "Final active cards": f"{_item['final_active_cards']['mean']:.2f} / 6",
+            }
+        )
+    mo.ui.table(_threshold_rows, selection=None)
+    return
+
+
+@app.cell
 def _(mo, results, results_url):
     compute = results["compute"]
     mo.md(
@@ -280,6 +308,7 @@ def _(mo, results, results_url):
         - Evidence backend: **{compute['backend']}**
         - GPU: **{compute['gpu_model']}**
         - Peak concurrent GPUs: **{compute['peak_gpu_count']}**
+        - Actual elapsed campaign time: **{compute['wall_hours']:.6f} hours**
         - Frozen evidence JSON: [{results_url}]({results_url})
         - Paper: [PATS, arXiv 2607.21419](https://arxiv.org/abs/2607.21419)
 

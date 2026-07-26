@@ -259,9 +259,9 @@ def headline(primary: dict[str, list[dict]]) -> None:
         width=0.66,
         edgecolor="white",
     )
-    offsets = np.array([-0.12, -0.04, 0.04, 0.12])
     for idx, condition in enumerate(ORDER):
         seeds = [100 * r["heldout_scaffold_free_success"] for r in primary[condition]]
+        offsets = np.linspace(-0.18, 0.18, len(seeds))
         ax.scatter(
             idx + offsets,
             seeds,
@@ -274,6 +274,7 @@ def headline(primary: dict[str, list[dict]]) -> None:
     ax.set_xticks(x, [LABELS[c] for c in ORDER])
     ax.set_ylabel("Held-out success without cards (%)")
     ax.set_title("Primary result: scaffold-free ALFWorld success after matched training")
+    ax.set_ylim(0, max(value + error for value, error in zip(values, errors)) * 1.16)
     ax.text(
         0.01,
         0.97,
@@ -387,7 +388,10 @@ def diversity(primary: dict[str, list[dict]]) -> None:
             )
         )
     bars = ax.bar(x, unique, color=[COLORS[c] for c in ORDER], width=0.66)
-    ax.set_xticks(x, [LABELS[c] for c in ORDER])
+    ax.set_xticks(
+        x,
+        ["No\nscaffold", "Static\ncards", "Adaptive\nremoval", "Cards\nretained"],
+    )
     ax.set_ylabel("Unique action sequences per group (maximum 8)")
     ax.set_title("Rollout diversity across all training checkpoints")
     for bar, dup in zip(bars, duplication):
@@ -537,6 +541,9 @@ def main() -> None:
             "backend": "kubernetes",
             "gpu_model": "NVIDIA RTX PRO 6000 Blackwell",
             "peak_gpu_count": 16,
+            "wall_hours": 4.375616,
+            "campaign_start_utc": "2026-07-26T14:18:14.602Z",
+            "campaign_end_utc": "2026-07-26T18:40:46.818Z",
         },
         "runs": records,
         "aggregates": {
