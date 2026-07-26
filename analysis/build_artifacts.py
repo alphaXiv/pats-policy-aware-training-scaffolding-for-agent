@@ -78,24 +78,40 @@ RUNS = {
             "651e1af2-ad2d-4658-aab1-7f6c075053bf",
             "f66e52ba-0225-4e61-8093-cb48de37dbd9",
             "764c75b4-278c-40ca-bdad-75fee52670a8",
+            "06706624-548e-4de1-a796-c5154b2d6afe",
+            "baa55a41-6ecc-43c4-a804-0e0410e1fef2",
+            "681ca3cb-60b6-410b-adf2-b1fc44a3dd6e",
+            "bc57b0ca-f53c-47d0-aa13-a04b68ca6e4f",
         ],
         "static": [
             "0bd69902-17bf-4528-a21a-ede75e6c9959",
             "3cc154cd-a773-4e03-adb8-0351366b0127",
             "cc484f2b-5161-42ed-841c-9148179feefd",
             "8801e7f8-7555-4fe8-8ca3-982d5cc507a6",
+            "a07728e2-6f30-4cae-b1a3-985a2e75ee27",
+            "ae48c28f-4ed9-496a-bf42-92bfe904188c",
+            "98d52214-4cd1-46ff-a414-54ef66d65b79",
+            "3583de14-7219-40cf-876f-5290b9e4186a",
         ],
         "adaptive": [
             "079b763b-50a5-43b9-830e-f6ac4aa4bfb3",
             "f8b1f161-43c9-404e-8f3b-c3583b798d48",
             "2e0fb7f8-293a-41dd-be1f-a10ca86357af",
             "095d71a3-2252-4847-a254-9a3767185734",
+            "9ff6a77d-b552-432f-ba18-b6e6fb8e8050",
+            "4e991d74-5899-470a-986a-6227192aabc7",
+            "d25d43cc-3b04-4e1f-a4d1-9c1ec14570b2",
+            "bf0aad98-077b-45d5-a907-e4fc67aba300",
         ],
         "adaptive_retain": [
             "554407bf-4f38-4d03-97a2-97f3ab18df22",
             "4c5224a5-99bf-46c3-bfe8-04b00b336d02",
             "0f1d2aad-bc2c-4678-97d1-846e8988c171",
             "68364acb-3481-4ae3-a335-1c11ad1f2651",
+            "d126b2ad-4c9c-4c1e-b99f-dc060ec85544",
+            "b1366124-4713-4c4b-a369-e07f6d0bc6d5",
+            "3d338ead-851a-433f-beab-0ec0d8f1090e",
+            "0d3b6e18-857c-430b-ac18-2ec35c243fee",
         ],
     },
     "threshold_0.00": {
@@ -278,7 +294,7 @@ def headline(primary: dict[str, list[dict]]) -> None:
     ax.text(
         0.01,
         0.97,
-        "Bars: mean across 4 seeds · dots: seed results · whiskers: seed SD · n=12 tasks/seed",
+        "Bars: mean across 8 seeds · dots: seed results · whiskers: seed SD · n=12 tasks/seed",
         transform=ax.transAxes,
         va="top",
         color="#4A5568",
@@ -367,16 +383,25 @@ def controller(primary: dict[str, list[dict]]) -> None:
 
 
 def diversity(primary: dict[str, list[dict]]) -> None:
-    fig, ax = plt.subplots(figsize=(9.2, 5.2))
+    fig, (ax, ax_entropy) = plt.subplots(1, 2, figsize=(10.8, 4.8))
     x = np.arange(len(ORDER))
     unique = []
     duplication = []
+    post_warmup_entropy = []
     for condition in ORDER:
         unique.append(
             statistics.mean(
                 point["unique_sequences_per_group"]
                 for record in primary[condition]
                 for point in record["training_dynamics"]
+            )
+        )
+        post_warmup_entropy.append(
+            statistics.mean(
+                point["action_entropy"]
+                for record in primary[condition]
+                for point in record["training_dynamics"]
+                if int(point["step"]) > 4
             )
         )
         duplication.append(
@@ -405,6 +430,30 @@ def diversity(primary: dict[str, list[dict]]) -> None:
         )
     ax.set_ylim(0, 8.8)
     style_axes(ax)
+
+    entropy_bars = ax_entropy.bar(
+        x,
+        post_warmup_entropy,
+        color=[COLORS[c] for c in ORDER],
+        width=0.66,
+    )
+    ax_entropy.set_xticks(
+        x,
+        ["No\nscaffold", "Static\ncards", "Adaptive\nremoval", "Cards\nretained"],
+    )
+    ax_entropy.set_ylabel("Mean action entropy after warm-up")
+    ax_entropy.set_title("Distributional diversity")
+    ax_entropy.set_ylim(1.98, 2.16)
+    for bar, entropy in zip(entropy_bars, post_warmup_entropy):
+        ax_entropy.text(
+            bar.get_x() + bar.get_width() / 2,
+            entropy + 0.003,
+            f"{entropy:.3f}",
+            ha="center",
+            fontsize=9,
+            color="#4A5568",
+        )
+    style_axes(ax_entropy)
     save_figure(fig, "rollout_diversity.png")
 
 
@@ -541,9 +590,9 @@ def main() -> None:
             "backend": "kubernetes",
             "gpu_model": "NVIDIA RTX PRO 6000 Blackwell",
             "peak_gpu_count": 16,
-            "wall_hours": 4.375616,
+            "wall_hours": 6.153805,
             "campaign_start_utc": "2026-07-26T14:18:14.602Z",
-            "campaign_end_utc": "2026-07-26T18:40:46.818Z",
+            "campaign_end_utc": "2026-07-26T20:27:28.300Z",
         },
         "runs": records,
         "aggregates": {

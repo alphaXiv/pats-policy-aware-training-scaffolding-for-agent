@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-26T18:44:11.149161+00:00",
+  "generated_utc": "2026-07-26T20:28:53.841010+00:00",
   "paper": {
     "id": "2607.21419",
     "alfworld_success_pats": 0.8071,
@@ -14,9 +14,9 @@
     "backend": "kubernetes",
     "gpu_model": "NVIDIA RTX PRO 6000 Blackwell",
     "peak_gpu_count": 16,
-    "wall_hours": 4.375616,
+    "wall_hours": 6.153805,
     "campaign_start_utc": "2026-07-26T14:18:14.602Z",
-    "campaign_end_utc": "2026-07-26T18:40:46.818Z"
+    "campaign_end_utc": "2026-07-26T20:27:28.300Z"
   },
   "runs": {
     "generic": {
@@ -5720,6 +5720,1078 @@
             }
           ],
           "wall_hours": 1.1701142876678043
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8132731914520264,
+              "step": 0,
+              "supported_nll": 5.839325348536174,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8132731914520264,
+              "step": 2,
+              "supported_nll": 5.839325348536174,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.6929269631703692,
+              "step": 4,
+              "supported_nll": 5.797860860824585,
+              "unsupported_nll": 5.104933897654216
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8338239590326948,
+              "step": 8,
+              "supported_nll": 5.81847349802653,
+              "unsupported_nll": 4.9846495389938354
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8132669130961103,
+              "step": 12,
+              "supported_nll": 5.860067129135132,
+              "unsupported_nll": 5.0468002160390215
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8349496126174927,
+              "step": 16,
+              "supported_nll": 5.818561792373657,
+              "unsupported_nll": 4.9836121797561646
+            }
+          ],
+          "condition": "none",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 0,
+          "final_nll_gap": -0.8349496126174927,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8185.833333333333,
+          "heldout_scaffold_free_success": 0.0,
+          "heldout_supported_mean_tokens": 10487.25,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8132731914520264,
+          "relative_nll_gap_reduction": 0.026653308375707063,
+          "scaffold_free_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 8185.833333333333,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "seed": 4,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 10487.25,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.126808948814869,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 1,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.146514468143384,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 2,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1314176043288575,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.12298108823597431,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 3,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1442681367198624,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 4,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1389781894783177,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 5,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.136863158554548,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.25391862727701664,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 6,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.148899107798934,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 7,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.146941357354323,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 8,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1400120254783404,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.5620523830875754,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 9,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.146316327899694,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 10,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.134143487225486,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.45538043044507504,
+              "mixed_groups": 2,
+              "reward_std": 0.14433756729740643,
+              "step": 11,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.137621544080752,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.11585907684639096,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 12,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.135014962224346,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.5209241607226431,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 13,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1310722585767508,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 14,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1268396489322186,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 15,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.130164793878794,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 16,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.188232924805747
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8340005079905186,
+              "step": 0,
+              "supported_nll": 5.860052665074666,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7712508042653399,
+              "step": 2,
+              "supported_nll": 5.777198791503906,
+              "unsupported_nll": 5.005947987238566
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7523473103841143,
+              "step": 4,
+              "supported_nll": 5.8599668343861895,
+              "unsupported_nll": 5.107619524002075
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7740335067113246,
+              "step": 8,
+              "supported_nll": 5.818638722101848,
+              "unsupported_nll": 5.044605215390523
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7728149096171055,
+              "step": 12,
+              "supported_nll": 5.797734340031941,
+              "unsupported_nll": 5.024919430414836
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7728962500890093,
+              "step": 16,
+              "supported_nll": 5.797782023747762,
+              "unsupported_nll": 5.024885773658752
+            }
+          ],
+          "condition": "none",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 0,
+          "final_nll_gap": -0.7728962500890093,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8110.083333333333,
+          "heldout_scaffold_free_success": 0.08333333333333333,
+          "heldout_supported_mean_tokens": 10387.416666666666,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8340005079905186,
+          "relative_nll_gap_reduction": -0.07326645165808937,
+          "scaffold_free_eval": {
+            "mean_steps": 19.666666666666668,
+            "mean_tokens": 8110.083333333333,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.5,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.08333333333333333
+          },
+          "seed": 5,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 10387.416666666666,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.137516617236866,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.42143738409504294,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 1,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.135718538090213,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.3542914413847029,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 2,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1408253901948533,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 3,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1404836417390753,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.2536709038540721,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 4,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.143719040974975,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 5,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.129511108698826,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.3893548836931586,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 6,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1263808912701077,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.3127464447170496,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 7,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1284782592207194,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 8,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1477850157767535,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 9,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.140336763858795,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 10,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1456959513439373,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.20428162580356002,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 11,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1492174184972455,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.21455582603812218,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 12,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1266519788652656,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 13,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.142520862540755,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.22517855325713754,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 14,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.134661803891261,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.04986019851639867,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 15,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1258903575440247,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 16,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.221894773973359
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8754378159840899,
+              "step": 0,
+              "supported_nll": 5.901489973068237,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.835249026616415,
+              "step": 2,
+              "supported_nll": 5.9015781084696455,
+              "unsupported_nll": 5.0663290818532305
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7737803061803179,
+              "step": 4,
+              "supported_nll": 5.818501790364583,
+              "unsupported_nll": 5.044721484184265
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.754037221272787,
+              "step": 8,
+              "supported_nll": 5.859915892283122,
+              "unsupported_nll": 5.105878671010335
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8354363441467285,
+              "step": 12,
+              "supported_nll": 5.880871772766113,
+              "unsupported_nll": 5.045435428619385
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7725150982538862,
+              "step": 16,
+              "supported_nll": 5.818628470102946,
+              "unsupported_nll": 5.04611337184906
+            }
+          ],
+          "condition": "none",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 0,
+          "final_nll_gap": -0.7725150982538862,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 7858.583333333333,
+          "heldout_scaffold_free_success": 0.08333333333333333,
+          "heldout_supported_mean_tokens": 10363.166666666666,
+          "heldout_supported_success": 0.08333333333333333,
+          "initial_nll_gap": -0.8754378159840899,
+          "relative_nll_gap_reduction": -0.11756713709529105,
+          "scaffold_free_eval": {
+            "mean_steps": 19.0,
+            "mean_tokens": 7858.583333333333,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.5,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.08333333333333333
+          },
+          "seed": 6,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 19.916666666666668,
+            "mean_tokens": 10363.166666666666,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.5,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.08333333333333333
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.1468240801829332,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.06113538006320596,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 1,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.128999543686708,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 2,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1276211058100065,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 3,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.124195573745029,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.5675327111966908,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 4,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1369433451182487,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.12528905412182212,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 5,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.129672350610296,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 6,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1426412040944256,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.3032566597685218,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 7,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.138891310617328,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 8,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.13831470819811,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0726601118221879,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 9,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.139782078150246,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.13520522695034742,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 10,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1330861327548822,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 11,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1421439565718177,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 12,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1360744098822275,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.2425804939121008,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 13,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.145003324871262,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 14,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.13651537121388,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.11013802886009216,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 15,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1334192335605624,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 16,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.204242119524214
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8340120315551758,
+              "step": 0,
+              "supported_nll": 5.860064188639323,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.6722552378972368,
+              "step": 2,
+              "supported_nll": 5.77718186378479,
+              "unsupported_nll": 5.104926625887553
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.6725289026896153,
+              "step": 4,
+              "supported_nll": 5.777225573857625,
+              "unsupported_nll": 5.10469667116801
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.6725289026896153,
+              "step": 8,
+              "supported_nll": 5.777225573857625,
+              "unsupported_nll": 5.10469667116801
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.792394121487936,
+              "step": 12,
+              "supported_nll": 5.777378479639689,
+              "unsupported_nll": 4.9849843581517534
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7910800774892177,
+              "step": 16,
+              "supported_nll": 5.798015753428142,
+              "unsupported_nll": 5.006935675938924
+            }
+          ],
+          "condition": "none",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 0,
+          "final_nll_gap": -0.7910800774892177,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8206.75,
+          "heldout_scaffold_free_success": 0.0,
+          "heldout_supported_mean_tokens": 10382.833333333334,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8340120315551758,
+          "relative_nll_gap_reduction": -0.051476420533050564,
+          "scaffold_free_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 8206.75,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "seed": 7,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 10382.833333333334,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.1369142888953876,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.16066247131675482,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 1,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1346063224510066,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.04716112790629268,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 2,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1250279439795836,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.10704830568283796,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 3,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1545167569071055,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 4,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1344164796173573,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 5,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1440118727584676,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 6,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.125906402493517,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 7,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1234936439742644,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 8,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1291107709352404,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.4924503043293953,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 9,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.129148571432019,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.4937192425131798,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 10,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.142411039521297,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.5033098766580224,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 11,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.13461424993972,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.34081605449318886,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 12,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1280065505454933,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.21081533888354897,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 13,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.139875555038452,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 14,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1325740502526362,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": -0.30269521242007613,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 15,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.1332110445946455,
+              "active_cards": 0,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 16,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.213897420366605
         }
       ],
       "static": [
@@ -6794,6 +7866,1078 @@
             }
           ],
           "wall_hours": 1.4450194001197816
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8132731914520264,
+              "step": 0,
+              "supported_nll": 5.839325348536174,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7893087466557827,
+              "step": 2,
+              "supported_nll": 5.839307943979899,
+              "unsupported_nll": 5.049999197324117
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.752538601557414,
+              "step": 4,
+              "supported_nll": 5.797933340072632,
+              "unsupported_nll": 5.045394738515218
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7724682490030927,
+              "step": 8,
+              "supported_nll": 5.818371693293254,
+              "unsupported_nll": 5.045903444290161
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7512180010477705,
+              "step": 12,
+              "supported_nll": 5.797773043314616,
+              "unsupported_nll": 5.046555042266846
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8131001393000288,
+              "step": 16,
+              "supported_nll": 5.839209953943889,
+              "unsupported_nll": 5.02610981464386
+            }
+          ],
+          "condition": "static",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 6,
+          "final_nll_gap": -0.8131001393000288,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8288.583333333334,
+          "heldout_scaffold_free_success": 0.0,
+          "heldout_supported_mean_tokens": 10418.416666666666,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8132731914520264,
+          "relative_nll_gap_reduction": -0.0002127847736977767,
+          "scaffold_free_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 8288.583333333334,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "seed": 4,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 10418.416666666666,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.0242817027183873,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.035418758634477854,
+              "mixed_groups": 3,
+              "reward_std": 0.18240842160972784,
+              "step": 1,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.016172379625436,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.36247292812913656,
+              "mixed_groups": 2,
+              "reward_std": 0.13580697202650016,
+              "step": 2,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0171136581649383,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.09350273292511702,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 3,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0226475002687603,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.2592258360236883,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 4,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.025046525720288,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.14278653729707003,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 5,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0072902966054187,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5267672557383776,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 6,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0203509537158193,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.0886863237246871,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 7,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.025355616416881,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4177338955923915,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 8,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.016511934788691,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5021490040235221,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 9,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0095247480190466,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.12853801203891635,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 10,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0220988991083924,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4988202345557511,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 11,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0153996100028357,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.34703902807086706,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 12,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.01776091940701,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.1687466511502862,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 13,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0210333309551594,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3352334718219936,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 14,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0143944340403683,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.48817358538508415,
+              "mixed_groups": 2,
+              "reward_std": 0.13580697202650016,
+              "step": 15,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.012907994866233,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3845544196665287,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 16,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.4515895119640563
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8340005079905186,
+              "step": 0,
+              "supported_nll": 5.860052665074666,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7941889365514117,
+              "step": 2,
+              "supported_nll": 5.880777915318807,
+              "unsupported_nll": 5.086588978767395
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8936033248901367,
+              "step": 4,
+              "supported_nll": 5.818711598714192,
+              "unsupported_nll": 4.925108273824056
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8342398007710781,
+              "step": 8,
+              "supported_nll": 5.860210100809733,
+              "unsupported_nll": 5.025970300038655
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8731787999471026,
+              "step": 12,
+              "supported_nll": 5.880857229232788,
+              "unsupported_nll": 5.0076784292856855
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7520711024602251,
+              "step": 16,
+              "supported_nll": 5.7978752454121905,
+              "unsupported_nll": 5.045804142951965
+            }
+          ],
+          "condition": "static",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 6,
+          "final_nll_gap": -0.7520711024602251,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8258.333333333334,
+          "heldout_scaffold_free_success": 0.0,
+          "heldout_supported_mean_tokens": 10402.833333333334,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8340005079905186,
+          "relative_nll_gap_reduction": -0.09823663744246174,
+          "scaffold_free_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 8258.333333333334,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "seed": 5,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 10402.833333333334,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.011831361883216,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.9096534894779325,
+              "mixed_groups": 2,
+              "reward_std": 0.14433756729740643,
+              "step": 1,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0075026086043746,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.44667311385273933,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 2,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0145621601638255,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5854591177776456,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 3,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0091794450456897,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.2717356448993087,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 4,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0110399012764293,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.32260858826339245,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 5,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.008253476082494,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.27618558518588543,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 6,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.010500875501721,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.10278389696031809,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 7,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 1.9960797747258958,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.025556691456586123,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 8,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0189754757965668,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.22624635510146618,
+              "mixed_groups": 1,
+              "reward_std": 0.08333333333333333,
+              "step": 9,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0077500048886847,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3356879069469869,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 10,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0048140356103246,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.2467300188727677,
+              "mixed_groups": 3,
+              "reward_std": 0.16535945694153692,
+              "step": 11,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.020260126656319,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.44812249206006527,
+              "mixed_groups": 2,
+              "reward_std": 0.15285593669469108,
+              "step": 12,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0254416248864597,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4346599904820323,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 13,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0111984032259542,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.6520466869696975,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 14,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.022272717211433,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.46789519488811493,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 15,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0066700708885223,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3918724097311497,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 16,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.439977265463935
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8754378159840899,
+              "step": 0,
+              "supported_nll": 5.901489973068237,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.9366828997929888,
+              "step": 2,
+              "supported_nll": 5.942836840947469,
+              "unsupported_nll": 5.00615394115448
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8318297068277998,
+              "step": 4,
+              "supported_nll": 5.859959999720256,
+              "unsupported_nll": 5.028130292892456
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7937922477722168,
+              "step": 8,
+              "supported_nll": 5.880654017130534,
+              "unsupported_nll": 5.086861769358317
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8126267194747925,
+              "step": 12,
+              "supported_nll": 5.839035511016846,
+              "unsupported_nll": 5.026408791542053
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8511532942454023,
+              "step": 16,
+              "supported_nll": 5.8810304800669355,
+              "unsupported_nll": 5.029877185821533
+            }
+          ],
+          "condition": "static",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 6,
+          "final_nll_gap": -0.8511532942454023,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8166.083333333333,
+          "heldout_scaffold_free_success": 0.0,
+          "heldout_supported_mean_tokens": 10378.75,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8754378159840899,
+          "relative_nll_gap_reduction": -0.027739859182789636,
+          "scaffold_free_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 8166.083333333333,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "seed": 6,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 10378.75,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.031347072677631,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.39269781904295087,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 1,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.044458201549045,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4245838522911072,
+              "mixed_groups": 2,
+              "reward_std": 0.15285593669469108,
+              "step": 2,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0266544821576726,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.03779923636466265,
+              "mixed_groups": 2,
+              "reward_std": 0.13580697202650016,
+              "step": 3,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0307773765575674,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.9140620576217771,
+              "mixed_groups": 2,
+              "reward_std": 0.15285593669469108,
+              "step": 4,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0362639806957707,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5905315047129989,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 5,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.039417266411086,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.06363547267392278,
+              "mixed_groups": 2,
+              "reward_std": 0.13580697202650016,
+              "step": 6,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.034472349979132,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.036279465071856976,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 7,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.035578567962767,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4201354878023267,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 8,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0363409571959608,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.2510838536545634,
+              "mixed_groups": 3,
+              "reward_std": 0.16535945694153692,
+              "step": 9,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0310037938877943,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.25504073360934854,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 10,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.031942713260651,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5763013530522585,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 11,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0260991642517703,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5612413855269551,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 12,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0365673386802277,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3698414256796241,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 13,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0273962603241364,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.42414167150855064,
+              "mixed_groups": 1,
+              "reward_std": 0.08333333333333333,
+              "step": 14,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.04956957427546,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.8964104484766722,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 15,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0283431912256695,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.23703018575906754,
+              "mixed_groups": 1,
+              "reward_std": 0.08333333333333333,
+              "step": 16,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.4424201780557633
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8340120315551758,
+              "step": 0,
+              "supported_nll": 5.860064188639323,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8338537613550816,
+              "step": 2,
+              "supported_nll": 5.839439948399861,
+              "unsupported_nll": 5.00558618704478
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7716838518778486,
+              "step": 4,
+              "supported_nll": 5.818542957305908,
+              "unsupported_nll": 5.04685910542806
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7109885215759277,
+              "step": 8,
+              "supported_nll": 5.777345498402913,
+              "unsupported_nll": 5.066356976826985
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8140356143315639,
+              "step": 12,
+              "supported_nll": 5.818492571512858,
+              "unsupported_nll": 5.0044569571812945
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.7088733514149981,
+              "step": 16,
+              "supported_nll": 5.735811551411946,
+              "unsupported_nll": 5.026938199996948
+            }
+          ],
+          "condition": "static",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 6,
+          "final_nll_gap": -0.7088733514149981,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8132.916666666667,
+          "heldout_scaffold_free_success": 0.08333333333333333,
+          "heldout_supported_mean_tokens": 10436.583333333334,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8340120315551758,
+          "relative_nll_gap_reduction": -0.1500442144783362,
+          "scaffold_free_eval": {
+            "mean_steps": 19.5,
+            "mean_tokens": 8132.916666666667,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.5,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.08333333333333333
+          },
+          "seed": 7,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 10436.583333333334,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.0439039151011795,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4798947018571198,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 1,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.031842205106781,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.35022060200572014,
+              "mixed_groups": 1,
+              "reward_std": 0.08333333333333333,
+              "step": 2,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.03708318154569,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.18308863509446383,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 3,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.028754005295454,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.22061748150736094,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 4,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.037428408151581,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.054469036404043436,
+              "mixed_groups": 2,
+              "reward_std": 0.13845315231384564,
+              "step": 5,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0344996888555733,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.1353453565388918,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 6,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0305956424434792,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.43072687555104494,
+              "mixed_groups": 3,
+              "reward_std": 0.18240842160972784,
+              "step": 7,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.031264858154787,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.6182321319356561,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 8,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0308583776156106,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.6045069862157106,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 9,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.035727462726838,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.08733729366213083,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 10,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.050218870952016,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.7368295136839151,
+              "mixed_groups": 1,
+              "reward_std": 0.08333333333333333,
+              "step": 11,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.02849707068905,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4089844971895218,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 12,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0333072523000064,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.12284396681934595,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 13,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.020831453268017,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3582659107632935,
+              "mixed_groups": 3,
+              "reward_std": 0.16535945694153692,
+              "step": 14,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.043735184201173,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5146824223920703,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 15,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.026915382469694,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 16,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.4386162762509451
         }
       ],
       "adaptive": [
@@ -7868,6 +10012,1078 @@
             }
           ],
           "wall_hours": 1.516503477692604
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8132731914520264,
+              "step": 0,
+              "supported_nll": 5.839325348536174,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.3594640890757246,
+              "step": 2,
+              "supported_nll": 5.306315183639526,
+              "unsupported_nll": 4.946851094563802
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.026824116706848145,
+              "step": 4,
+              "supported_nll": 5.058480342229207,
+              "unsupported_nll": 5.085304458936055
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.02431321144104004,
+              "step": 8,
+              "supported_nll": 4.979946732521057,
+              "unsupported_nll": 5.004259943962097
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.24719492594400982,
+              "step": 12,
+              "supported_nll": 4.8186430136362715,
+              "unsupported_nll": 5.065837939580281
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.14731991291046143,
+              "step": 16,
+              "supported_nll": 4.817362070083618,
+              "unsupported_nll": 4.96468198299408
+            }
+          ],
+          "condition": "adaptive",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 6,
+          "final_nll_gap": 0.14731991291046143,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8253.916666666666,
+          "heldout_scaffold_free_success": 0.08333333333333333,
+          "heldout_supported_mean_tokens": 14251.0,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8132731914520264,
+          "relative_nll_gap_reduction": -1.1811444351773541,
+          "scaffold_free_eval": {
+            "mean_steps": 19.833333333333332,
+            "mean_tokens": 8253.916666666666,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.5,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.08333333333333333
+          },
+          "seed": 4,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 14251.0,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.0242817027183873,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.035418758634477854,
+              "mixed_groups": 3,
+              "reward_std": 0.18240842160972784,
+              "step": 1,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.022381180962021,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5216208114288747,
+              "mixed_groups": 2,
+              "reward_std": 0.13580697202650016,
+              "step": 2,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.024109609425068,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.23774563521146774,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 3,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0516066312376,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.45401218719780445,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 4,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0323952179668208,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.2581310993991792,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 5,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0328496932155558,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.09802903607487679,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 6,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0391365639432664,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.42281012888997793,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 7,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0559541299677733,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.12503941543400288,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 8,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.022622952858607,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5626587495207787,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 9,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.064230848119682,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.15698739606887102,
+              "mixed_groups": 3,
+              "reward_std": 0.18240842160972784,
+              "step": 10,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.047105003946594,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4717458747327328,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 11,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.051770068602663,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.19979731692001224,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 12,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0520074091408222,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.14628046471625566,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 13,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.038333905063439,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.2997371042147279,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 14,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0378943590232232,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.41146312467753887,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 15,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0422644793987277,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 16,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.7093328072627385
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8340005079905186,
+              "step": 0,
+              "supported_nll": 5.860052665074666,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.22720046838124652,
+              "step": 2,
+              "supported_nll": 5.230491558710734,
+              "unsupported_nll": 5.003291090329488
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.26883506774902344,
+              "step": 4,
+              "supported_nll": 4.777640501658122,
+              "unsupported_nll": 5.0464755694071455
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.2118016481399536,
+              "step": 8,
+              "supported_nll": 4.797268509864807,
+              "unsupported_nll": 5.009070158004761
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.372905770937602,
+              "step": 12,
+              "supported_nll": 4.675493319829305,
+              "unsupported_nll": 5.048399090766907
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.3923806349436445,
+              "step": 16,
+              "supported_nll": 4.613250573476155,
+              "unsupported_nll": 5.0056312084198
+            }
+          ],
+          "condition": "adaptive",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 5,
+          "final_nll_gap": 0.3923806349436445,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8221.916666666666,
+          "heldout_scaffold_free_success": 0.0,
+          "heldout_supported_mean_tokens": 13601.583333333334,
+          "heldout_supported_success": 0.08333333333333333,
+          "initial_nll_gap": -0.8340005079905186,
+          "relative_nll_gap_reduction": -1.4704800910602147,
+          "scaffold_free_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 8221.916666666666,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "seed": 5,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 19.083333333333332,
+            "mean_tokens": 13601.583333333334,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.5,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.08333333333333333
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.011831361883216,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.9096534894779325,
+              "mixed_groups": 2,
+              "reward_std": 0.14433756729740643,
+              "step": 1,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.016874043537038,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.46884613251313567,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 2,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.010194509293811,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.581126743927598,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 3,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0135522173209623,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.08540148939937353,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 4,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0104096716718263,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5437997342087328,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 5,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0415470996952845,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.29886453971266747,
+              "mixed_groups": 2,
+              "reward_std": 0.14433756729740643,
+              "step": 6,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0381501804209416,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.009779007639735937,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 7,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0235444458949767,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.5082538528367877,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 8,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0596595990829747,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.3480379949323833,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 9,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0343401468048494,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.6929006557911634,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 10,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0516266024361056,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 11,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0513298188232714,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.4334298502653837,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 12,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.039167748639981,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 13,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0478177540386335,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.1841256357729435,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 14,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.060933909751475,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.5168793285265565,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 15,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.04606942422688,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 16,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.6003688887092802
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8754378159840899,
+              "step": 0,
+              "supported_nll": 5.901489973068237,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.320568998654684,
+              "step": 2,
+              "supported_nll": 5.365999142328898,
+              "unsupported_nll": 5.045430143674214
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.051212469736734434,
+              "step": 4,
+              "supported_nll": 5.056945403416951,
+              "unsupported_nll": 5.005732933680217
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.0265651543935137,
+              "step": 8,
+              "supported_nll": 5.059819380442302,
+              "unsupported_nll": 5.086384534835815
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.13032464186350534,
+              "step": 12,
+              "supported_nll": 4.87721308072408,
+              "unsupported_nll": 5.0075377225875854
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.1919717788696289,
+              "step": 16,
+              "supported_nll": 4.836228013038635,
+              "unsupported_nll": 5.028199791908264
+            }
+          ],
+          "condition": "adaptive",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 5,
+          "final_nll_gap": 0.1919717788696289,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8274.5,
+          "heldout_scaffold_free_success": 0.0,
+          "heldout_supported_mean_tokens": 14218.416666666666,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8754378159840899,
+          "relative_nll_gap_reduction": -1.2192865962202366,
+          "scaffold_free_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 8274.5,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "seed": 6,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 14218.416666666666,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.031347072677631,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.39269781904295087,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 1,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0511580522163357,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.20663535501807928,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 2,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0414233693054746,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.13702747831121087,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 3,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.046933824872529,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.03790757525712252,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 4,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0279812260796204,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.44770571775734425,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 5,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0531435016542674,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5324095766991377,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 6,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0536124327184773,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.3600793555378914,
+              "mixed_groups": 2,
+              "reward_std": 0.13845315231384564,
+              "step": 7,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0645617485046386,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.06365262111648917,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 8,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.063128119831284,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 9,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.083996583521366,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 10,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.078811623031894,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 11,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0877008567529693,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.5430389479734004,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 12,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.07535174464186,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.7678384063765407,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 13,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0803231354948934,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.15477183042094111,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 14,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0714150300870338,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.22631034720689058,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 15,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0737748622716894,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.7473118752241135,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 16,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.6386372839079963
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8340120315551758,
+              "step": 0,
+              "supported_nll": 5.860064188639323,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.2581058343251543,
+              "step": 2,
+              "supported_nll": 5.304093956947327,
+              "unsupported_nll": 5.045988122622172
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.31847910086313913,
+              "step": 4,
+              "supported_nll": 5.345779339472453,
+              "unsupported_nll": 5.027300238609314
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.07597426573435406,
+              "step": 8,
+              "supported_nll": 5.102581938107808,
+              "unsupported_nll": 5.026607672373454
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.1257254679997768,
+              "step": 12,
+              "supported_nll": 4.921411593755086,
+              "unsupported_nll": 5.047137061754863
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.14894417921702097,
+              "step": 16,
+              "supported_nll": 4.858951091766357,
+              "unsupported_nll": 5.007895270983378
+            }
+          ],
+          "condition": "adaptive",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 5,
+          "final_nll_gap": 0.14894417921702097,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8343.416666666666,
+          "heldout_scaffold_free_success": 0.0,
+          "heldout_supported_mean_tokens": 14245.416666666666,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8340120315551758,
+          "relative_nll_gap_reduction": -1.1785875665837648,
+          "scaffold_free_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 8343.416666666666,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "seed": 7,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 14245.416666666666,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.0439039151011795,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4798947018571198,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 1,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.031442473470061,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5521185211837292,
+              "mixed_groups": 1,
+              "reward_std": 0.08333333333333333,
+              "step": 2,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0433693436905744,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.11625594971701503,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 3,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.05245441440681,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3955159606412053,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 4,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.040187198895414,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.6813950277864933,
+              "mixed_groups": 2,
+              "reward_std": 0.13580697202650016,
+              "step": 5,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0542729268116613,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.5491550173610449,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 6,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0569389710823693,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.49611916672438383,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 7,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.062834126409143,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.2891448447480798,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 8,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.07024770701925,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 9,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0697969136869205,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.033458360470831394,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 10,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0833255919731326,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.23900270368903875,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 11,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.074336903045575,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 12,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0706627175275587,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.11091907462105155,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 13,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0658941477537156,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 14,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0738232187319343,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.23372114822268486,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 15,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0667896929714415,
+              "active_cards": 5,
+              "duplication_rate": 0.0,
+              "loss": -0.4106546128168702,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 16,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.613104775150617
         }
       ],
       "adaptive_retain": [
@@ -8942,6 +12158,1078 @@
             }
           ],
           "wall_hours": 1.7067122532924017
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8132731914520264,
+              "step": 0,
+              "supported_nll": 5.839325348536174,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.3594640890757246,
+              "step": 2,
+              "supported_nll": 5.306315183639526,
+              "unsupported_nll": 4.946851094563802
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.026824116706848145,
+              "step": 4,
+              "supported_nll": 5.058480342229207,
+              "unsupported_nll": 5.085304458936055
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.02431321144104004,
+              "step": 8,
+              "supported_nll": 4.979946732521057,
+              "unsupported_nll": 5.004259943962097
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.24719492594400982,
+              "step": 12,
+              "supported_nll": 4.8186430136362715,
+              "unsupported_nll": 5.065837939580281
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.14731991291046143,
+              "step": 16,
+              "supported_nll": 4.817362070083618,
+              "unsupported_nll": 4.96468198299408
+            }
+          ],
+          "condition": "adaptive_retain",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 6,
+          "final_nll_gap": 0.14731991291046143,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8253.916666666666,
+          "heldout_scaffold_free_success": 0.08333333333333333,
+          "heldout_supported_mean_tokens": 14251.0,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8132731914520264,
+          "relative_nll_gap_reduction": -1.1811444351773541,
+          "scaffold_free_eval": {
+            "mean_steps": 19.833333333333332,
+            "mean_tokens": 8253.916666666666,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.5,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.08333333333333333
+          },
+          "seed": 4,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 14251.0,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.0242817027183873,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.035418758634477854,
+              "mixed_groups": 3,
+              "reward_std": 0.18240842160972784,
+              "step": 1,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.022381180962021,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5216208114288747,
+              "mixed_groups": 2,
+              "reward_std": 0.13580697202650016,
+              "step": 2,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.024109609425068,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.23774563521146774,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 3,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0516066312376,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.45401218719780445,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 4,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0323952179668208,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.2581310993991792,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 5,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0328496932155558,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.09802903607487679,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 6,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0391365639432664,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.42281012888997793,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 7,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0559541299677733,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.12503941543400288,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 8,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.022622952858607,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5626587495207787,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 9,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.064230848119682,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.15698739606887102,
+              "mixed_groups": 3,
+              "reward_std": 0.18240842160972784,
+              "step": 10,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.047105003946594,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4717458747327328,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 11,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.051770068602663,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.19979731692001224,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 12,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0520074091408222,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.14628046471625566,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 13,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.038333905063439,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.2997371042147279,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 14,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0378943590232232,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.41146312467753887,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 15,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0422644793987277,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 16,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.7157356167501874
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8340005079905186,
+              "step": 0,
+              "supported_nll": 5.860052665074666,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.22720046838124652,
+              "step": 2,
+              "supported_nll": 5.230491558710734,
+              "unsupported_nll": 5.003291090329488
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.26883506774902344,
+              "step": 4,
+              "supported_nll": 4.777640501658122,
+              "unsupported_nll": 5.0464755694071455
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.2118016481399536,
+              "step": 8,
+              "supported_nll": 4.797268509864807,
+              "unsupported_nll": 5.009070158004761
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.43470855553944876,
+              "step": 12,
+              "supported_nll": 4.5914753675460815,
+              "unsupported_nll": 5.02618392308553
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.5134555101394653,
+              "step": 16,
+              "supported_nll": 4.572697162628174,
+              "unsupported_nll": 5.086152672767639
+            }
+          ],
+          "condition": "adaptive_retain",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 6,
+          "final_nll_gap": 0.5134555101394653,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8173.833333333333,
+          "heldout_scaffold_free_success": 0.08333333333333333,
+          "heldout_supported_mean_tokens": 13674.833333333334,
+          "heldout_supported_success": 0.08333333333333333,
+          "initial_nll_gap": -0.8340005079905186,
+          "relative_nll_gap_reduction": -1.6156537139007385,
+          "scaffold_free_eval": {
+            "mean_steps": 19.75,
+            "mean_tokens": 8173.833333333333,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.5,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.08333333333333333
+          },
+          "seed": 5,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 19.166666666666668,
+            "mean_tokens": 13674.833333333334,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.5,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.08333333333333333
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.011831361883216,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.9096534894779325,
+              "mixed_groups": 2,
+              "reward_std": 0.14433756729740643,
+              "step": 1,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.016874043537038,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.46884613251313567,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 2,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.010194509293811,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.581126743927598,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 3,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0135522173209623,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.08540148939937353,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 4,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0104096716718263,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5437997342087328,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 5,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0415470996952845,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.29886453971266747,
+              "mixed_groups": 2,
+              "reward_std": 0.14433756729740643,
+              "step": 6,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0381501804209416,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.009779007639735937,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 7,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0235444458949767,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5082538528367877,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 8,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.039366024188168,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.12281455751508474,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 9,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0486506525151156,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.16138596925884485,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 10,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.04827078809824,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.1811512210406363,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 11,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.035185423038072,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.33282909262925386,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 12,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.037398487784796,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.7721443232148886,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 13,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.031588112211424,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3814255967736244,
+              "mixed_groups": 2,
+              "reward_std": 0.13580697202650016,
+              "step": 14,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.03476756028831,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.05316743813455105,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 15,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.033533584557003,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.13365652784705162,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 16,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.6989463384283914
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8754378159840899,
+              "step": 0,
+              "supported_nll": 5.901489973068237,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.320568998654684,
+              "step": 2,
+              "supported_nll": 5.365999142328898,
+              "unsupported_nll": 5.045430143674214
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.051212469736734434,
+              "step": 4,
+              "supported_nll": 5.056945403416951,
+              "unsupported_nll": 5.005732933680217
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.051177382469177246,
+              "step": 8,
+              "supported_nll": 5.0584525267283125,
+              "unsupported_nll": 5.007275144259135
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.22800815105438232,
+              "step": 12,
+              "supported_nll": 4.757355014483134,
+              "unsupported_nll": 4.985363165537517
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.3701436519622803,
+              "step": 16,
+              "supported_nll": 4.675357262293498,
+              "unsupported_nll": 5.045500914255778
+            }
+          ],
+          "condition": "adaptive_retain",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 6,
+          "final_nll_gap": 0.3701436519622803,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8217.583333333334,
+          "heldout_scaffold_free_success": 0.0,
+          "heldout_supported_mean_tokens": 14165.833333333334,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8754378159840899,
+          "relative_nll_gap_reduction": -1.422809758961803,
+          "scaffold_free_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 8217.583333333334,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "seed": 6,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 14165.833333333334,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.031347072677631,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.39269781904295087,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 1,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0511580522163357,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.20663535501807928,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 2,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0414233693054746,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.13702747831121087,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 3,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.046933824872529,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.03790757525712252,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 4,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0279812260796204,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.44770571775734425,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 5,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0531435016542674,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5324095766991377,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 6,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0536124327184773,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3600793555378914,
+              "mixed_groups": 2,
+              "reward_std": 0.13845315231384564,
+              "step": 7,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0583449755928345,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.7280160561203957,
+              "mixed_groups": 1,
+              "reward_std": 0.08068715304598785,
+              "step": 8,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0728862102246945,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.1598936691880226,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 9,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.067016815067383,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.20242815557867289,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 10,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.057861573807895,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.500781549140811,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 11,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.061512648637983,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.2124491953290999,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 12,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.066197408101073,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5580282369628549,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 13,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0702672740888026,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5234374236315489,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 14,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0503457653025783,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 15,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.048482485446665,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5468038655817509,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 16,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.6813231713904275
+        },
+        {
+          "backend": "kubernetes",
+          "checkpoints": [
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.8340120315551758,
+              "step": 0,
+              "supported_nll": 5.860064188639323,
+              "unsupported_nll": 5.026052157084147
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.2581058343251543,
+              "step": 2,
+              "supported_nll": 5.304093956947327,
+              "unsupported_nll": 5.045988122622172
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.31847910086313913,
+              "step": 4,
+              "supported_nll": 5.345779339472453,
+              "unsupported_nll": 5.027300238609314
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": -0.1160280704498291,
+              "step": 8,
+              "supported_nll": 5.182986736297607,
+              "unsupported_nll": 5.066958665847778
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.03106240431467633,
+              "step": 12,
+              "supported_nll": 5.059183756510417,
+              "unsupported_nll": 5.090246160825093
+            },
+            {
+              "nll_examples": 6,
+              "nll_gap": 0.1299952268600464,
+              "step": 16,
+              "supported_nll": 4.997817595799764,
+              "unsupported_nll": 5.12781282265981
+            }
+          ],
+          "condition": "adaptive_retain",
+          "event": "FINAL_METRICS",
+          "final_active_cards": 6,
+          "final_nll_gap": 0.1299952268600464,
+          "gpu_count": 1,
+          "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+          "heldout_scaffold_free_mean_tokens": 8212.5,
+          "heldout_scaffold_free_success": 0.08333333333333333,
+          "heldout_supported_mean_tokens": 14166.916666666666,
+          "heldout_supported_success": 0.0,
+          "initial_nll_gap": -0.8340120315551758,
+          "relative_nll_gap_reduction": -1.1558673279780451,
+          "scaffold_free_eval": {
+            "mean_steps": 19.666666666666668,
+            "mean_tokens": 8212.5,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.5,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.08333333333333333
+          },
+          "seed": 7,
+          "subset_sha256": "8a272a841f27a8e1",
+          "supported_eval": {
+            "mean_steps": 20.0,
+            "mean_tokens": 14166.916666666666,
+            "n": 12,
+            "per_family": {
+              "look_at_obj_in_light": 0.0,
+              "pick_and_place_simple": 0.0,
+              "pick_clean_then_place_in_recep": 0.0,
+              "pick_cool_then_place_in_recep": 0.0,
+              "pick_heat_then_place_in_recep": 0.0,
+              "pick_two_obj_and_place": 0.0
+            },
+            "success": 0.0
+          },
+          "training_dynamics": [
+            {
+              "action_entropy": 2.0439039151011795,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.4798947018571198,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 1,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.031442473470061,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5521185211837292,
+              "mixed_groups": 1,
+              "reward_std": 0.08333333333333333,
+              "step": 2,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0433693436905744,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.11625594971701503,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 3,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.05245441440681,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3955159606412053,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 4,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.040187198895414,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.6813950277864933,
+              "mixed_groups": 2,
+              "reward_std": 0.13580697202650016,
+              "step": 5,
+              "train_success": 0.08333333333333333,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.05765976616078,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.6012257607653737,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 6,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.053160288184881,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.15025873202830553,
+              "mixed_groups": 3,
+              "reward_std": 0.1909267910070125,
+              "step": 7,
+              "train_success": 0.10416666666666667,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.036984602906383,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.1534877992235124,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 8,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.052739305297534,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.17640120489522815,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 9,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0529334130696952,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.31904607778415084,
+              "mixed_groups": 1,
+              "reward_std": 0.055119818980512304,
+              "step": 10,
+              "train_success": 0.020833333333333332,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.044007750374801,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.37959768529981375,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 11,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0558601485668784,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3274601325392723,
+              "mixed_groups": 2,
+              "reward_std": 0.1272886026292155,
+              "step": 12,
+              "train_success": 0.0625,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.051592538720015,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.3134733187034726,
+              "mixed_groups": 1,
+              "reward_std": 0.07216878364870322,
+              "step": 13,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.029530054330826,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": 0.0,
+              "mixed_groups": 0,
+              "reward_std": 0.0,
+              "step": 14,
+              "train_success": 0.0,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.029690865937266,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.30158097483217716,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 15,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            },
+            {
+              "action_entropy": 2.0266407577941816,
+              "active_cards": 6,
+              "duplication_rate": 0.0,
+              "loss": -0.5051008486188948,
+              "mixed_groups": 2,
+              "reward_std": 0.11023963796102461,
+              "step": 16,
+              "train_success": 0.041666666666666664,
+              "unique_sequences_per_group": 8.0
+            }
+          ],
+          "wall_hours": 1.6839795171552234
         }
       ]
     },
@@ -14139,72 +18427,100 @@
       "none": {
         "heldout_scaffold_free_success": {
           "mean": 0.041666666666666664,
-          "sd": 0.04811252243246881,
+          "sd": 0.0445435403187374,
           "values": [
             0.08333333333333333,
             0.0,
             0.0,
-            0.08333333333333333
+            0.08333333333333333,
+            0.0,
+            0.08333333333333333,
+            0.08333333333333333,
+            0.0
           ]
         },
         "heldout_supported_success": {
           "mean": 0.020833333333333332,
-          "sd": 0.041666666666666664,
+          "sd": 0.03857583749052298,
           "values": [
             0.0,
             0.0,
             0.0,
-            0.08333333333333333
+            0.08333333333333333,
+            0.0,
+            0.0,
+            0.08333333333333333,
+            0.0
           ]
         },
         "heldout_scaffold_free_mean_tokens": {
-          "mean": 8154.25,
-          "sd": 95.14041766817128,
+          "mean": 8122.28125,
+          "sd": 126.5488717432287,
           "values": [
             8063.333333333333,
             8268.25,
             8195.75,
-            8089.666666666667
+            8089.666666666667,
+            8185.833333333333,
+            8110.083333333333,
+            7858.583333333333,
+            8206.75
           ]
         },
         "heldout_supported_mean_tokens": {
-          "mean": 10295.0,
-          "sd": 175.1114327760726,
+          "mean": 10350.083333333334,
+          "sd": 133.94078886073103,
           "values": [
             10428.333333333334,
             10381.833333333334,
             10330.583333333334,
-            10039.25
+            10039.25,
+            10487.25,
+            10387.416666666666,
+            10363.166666666666,
+            10382.833333333334
           ]
         },
         "initial_nll_gap": {
-          "mean": -0.844467480977376,
-          "sd": 0.05965053303722349,
+          "mean": -0.8418241838614143,
+          "sd": 0.04271129227278003,
           "values": [
             -0.896085262298584,
             -0.7928086121877032,
             -0.8961674372355137,
-            -0.7928086121877032
+            -0.7928086121877032,
+            -0.8132731914520264,
+            -0.8340005079905186,
+            -0.8754378159840899,
+            -0.8340120315551758
           ]
         },
         "final_nll_gap": {
-          "mean": -0.8075371980667116,
-          "sd": 0.020436834462608834,
+          "mean": -0.8001987288395566,
+          "sd": 0.024701034116791965,
           "values": [
             -0.8342450857162476,
             -0.8127920230229693,
             -0.7923497756322231,
-            -0.7907619078954067
+            -0.7907619078954067,
+            -0.8349496126174927,
+            -0.7728962500890093,
+            -0.7725150982538862,
+            -0.7910800774892177
           ]
         },
         "relative_nll_gap_reduction": {
-          "mean": -0.04055837667651855,
-          "sd": 0.06388796677477745,
+          "mean": -0.04723627595209977,
+          "sd": 0.05797172195551826,
           "values": [
             -0.06901148716999064,
             0.025205844800453424,
             -0.11584627748085345,
-            -0.002581586855683529
+            -0.002581586855683529,
+            0.026653308375707063,
+            -0.07326645165808937,
+            -0.11756713709529105,
+            -0.051476420533050564
           ]
         },
         "final_active_cards": {
@@ -14214,46 +18530,62 @@
             0.0,
             0.0,
             0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
             0.0
           ]
         },
         "wall_hours": {
-          "mean": 1.1836059498621359,
-          "sd": 0.018858093611393408,
+          "mean": 1.1953363797648084,
+          "sd": 0.01998902138300022,
           "values": [
             1.1968518627352185,
             1.1648956924014622,
             1.2025619566440582,
-            1.1701142876678043
+            1.1701142876678043,
+            1.188232924805747,
+            1.221894773973359,
+            1.204242119524214,
+            1.213897420366605
           ]
         },
         "absolute_nll_gap": {
-          "initial_mean": 0.844467480977376,
-          "final_mean": 0.8075371980667116,
-          "mean_reduction": 0.040558376676518515,
-          "pooled_reduction": 0.04373203674808379,
+          "initial_mean": 0.8418241838614143,
+          "final_mean": 0.8001987288395566,
+          "mean_reduction": 0.047236275952099754,
+          "pooled_reduction": 0.04944673225105445,
           "per_seed_reduction": [
             0.06901148716999062,
             -0.025205844800453514,
             0.11584627748085341,
-            0.0025815868556835486
+            0.0025815868556835486,
+            -0.026653308375707008,
+            0.07326645165808932,
+            0.1175671370952911,
+            0.05147642053305057
           ]
         },
         "rollout_diversity": {
           "unique_sequences_per_group_mean": 8.0,
           "duplication_rate_mean": 0.0
         },
-        "success_count": 2,
-        "evaluation_episodes": 48
+        "success_count": 4,
+        "evaluation_episodes": 96
       },
       "static": {
         "heldout_scaffold_free_success": {
-          "mean": 0.041666666666666664,
-          "sd": 0.04811252243246881,
+          "mean": 0.03125,
+          "sd": 0.043129097458897134,
           "values": [
             0.0,
             0.0,
             0.08333333333333333,
+            0.08333333333333333,
+            0.0,
+            0.0,
+            0.0,
             0.08333333333333333
           ]
         },
@@ -14264,57 +18596,81 @@
             0.0,
             0.0,
             0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
             0.0
           ]
         },
         "heldout_scaffold_free_mean_tokens": {
-          "mean": 8132.729166666666,
-          "sd": 143.13562551533605,
+          "mean": 8172.104166666667,
+          "sd": 113.54027631302502,
           "values": [
             8225.416666666666,
             8284.416666666666,
             8009.166666666667,
-            8011.916666666667
+            8011.916666666667,
+            8288.583333333334,
+            8258.333333333334,
+            8166.083333333333,
+            8132.916666666667
           ]
         },
         "heldout_supported_mean_tokens": {
-          "mean": 10378.6875,
-          "sd": 93.36391797988934,
+          "mean": 10393.916666666668,
+          "sd": 65.255982514772,
           "values": [
             10288.583333333334,
             10369.583333333334,
             10347.583333333334,
-            10509.0
+            10509.0,
+            10418.416666666666,
+            10402.833333333334,
+            10378.75,
+            10436.583333333334
           ]
         },
         "initial_nll_gap": {
-          "mean": -0.844467480977376,
-          "sd": 0.05965053303722349,
+          "mean": -0.8418241838614143,
+          "sd": 0.04271129227278003,
           "values": [
             -0.896085262298584,
             -0.7928086121877032,
             -0.8961674372355137,
-            -0.7928086121877032
+            -0.7928086121877032,
+            -0.8132731914520264,
+            -0.8340005079905186,
+            -0.8754378159840899,
+            -0.8340120315551758
           ]
         },
         "final_nll_gap": {
-          "mean": -0.8186750809351604,
-          "sd": 0.1234152260560801,
+          "mean": -0.799987276395162,
+          "sd": 0.09295045210647583,
           "values": [
             -0.9545444250106812,
             -0.6700017849604292,
             -0.8753152688344317,
-            -0.7748388449350996
+            -0.7748388449350996,
+            -0.8131001393000288,
+            -0.7520711024602251,
+            -0.8511532942454023,
+            -0.7088733514149981
           ]
         },
         "relative_nll_gap_reduction": {
-          "mean": -0.03389917548328805,
-          "sd": 0.09075405721998475,
+          "mean": -0.051478774726304695,
+          "sd": 0.07656766141332809,
           "values": [
             0.06523839323296228,
             -0.1549009752661448,
             -0.02326816121037222,
-            -0.022665958689597462
+            -0.022665958689597462,
+            -0.0002127847736977767,
+            -0.09823663744246174,
+            -0.027739859182789636,
+            -0.1500442144783362
           ]
         },
         "final_active_cards": {
@@ -14324,249 +18680,41 @@
             6.0,
             6.0,
             6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
             6.0
           ]
         },
         "wall_hours": {
-          "mean": 1.4508699153694842,
-          "sd": 0.00690480113973423,
+          "mean": 1.4470103616515795,
+          "sd": 0.007216815390548016,
           "values": [
             1.4447655007574294,
             1.4566521165106032,
             1.4570426440901227,
-            1.4450194001197816
+            1.4450194001197816,
+            1.4515895119640563,
+            1.439977265463935,
+            1.4424201780557633,
+            1.4386162762509451
           ]
         },
         "absolute_nll_gap": {
-          "initial_mean": 0.844467480977376,
-          "final_mean": 0.8186750809351604,
-          "mean_reduction": 0.033899175483288024,
-          "pooled_reduction": 0.03054279841819818,
+          "initial_mean": 0.8418241838614143,
+          "final_mean": 0.799987276395162,
+          "mean_reduction": 0.05147877472630469,
+          "pooled_reduction": 0.0496979158692592,
           "per_seed_reduction": [
             -0.06523839323296232,
             0.15490097526614477,
             0.02326816121037223,
-            0.02266595868959742
-          ]
-        },
-        "rollout_diversity": {
-          "unique_sequences_per_group_mean": 8.0,
-          "duplication_rate_mean": 0.0
-        },
-        "success_count": 2,
-        "evaluation_episodes": 48
-      },
-      "adaptive": {
-        "heldout_scaffold_free_success": {
-          "mean": 0.10416666666666666,
-          "sd": 0.07978559231302818,
-          "values": [
-            0.16666666666666666,
-            0.0,
-            0.16666666666666666,
-            0.08333333333333333
-          ]
-        },
-        "heldout_supported_success": {
-          "mean": 0.041666666666666664,
-          "sd": 0.08333333333333333,
-          "values": [
-            0.16666666666666666,
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        "heldout_scaffold_free_mean_tokens": {
-          "mean": 8062.291666666666,
-          "sd": 144.76758992465332,
-          "values": [
-            8210.5,
-            8128.833333333333,
-            7873.0,
-            8036.833333333333
-          ]
-        },
-        "heldout_supported_mean_tokens": {
-          "mean": 13883.645833333334,
-          "sd": 647.1958043308985,
-          "values": [
-            12917.0,
-            14134.583333333334,
-            14280.833333333334,
-            14202.166666666666
-          ]
-        },
-        "initial_nll_gap": {
-          "mean": -0.844467480977376,
-          "sd": 0.05965053303722349,
-          "values": [
-            -0.896085262298584,
-            -0.7928086121877032,
-            -0.8961674372355137,
-            -0.7928086121877032
-          ]
-        },
-        "final_nll_gap": {
-          "mean": 0.24180764953295375,
-          "sd": 0.2390850183462751,
-          "values": [
-            0.2913320859273272,
-            0.5321923096974688,
-            0.1879132588704433,
-            -0.04420705636342426
-          ]
-        },
-        "relative_nll_gap_reduction": {
-          "mean": -1.2875791215601367,
-          "sd": 0.3014302123690017,
-          "values": [
-            -1.3251164796305428,
-            -1.6712746323843772,
-            -1.2096854349563468,
-            -0.9442399392692798
-          ]
-        },
-        "final_active_cards": {
-          "mean": 4.75,
-          "sd": 0.5,
-          "values": [
-            5.0,
-            5.0,
-            5.0,
-            4.0
-          ]
-        },
-        "wall_hours": {
-          "mean": 1.6473085579607223,
-          "sd": 0.09167497402489588,
-          "values": [
-            1.6738854905631808,
-            1.730766266187032,
-            1.6680789974000718,
-            1.516503477692604
-          ]
-        },
-        "absolute_nll_gap": {
-          "initial_mean": 0.844467480977376,
-          "final_mean": 0.2639111777146659,
-          "mean_reduction": 0.6845408480745032,
-          "pooled_reduction": 0.6874821308581138,
-          "per_seed_reduction": [
-            0.6748835203694572,
-            0.32872536761562265,
-            0.7903145650436532,
-            0.9442399392692798
-          ]
-        },
-        "rollout_diversity": {
-          "unique_sequences_per_group_mean": 8.0,
-          "duplication_rate_mean": 0.0
-        },
-        "success_count": 5,
-        "evaluation_episodes": 48
-      },
-      "adaptive_retain": {
-        "heldout_scaffold_free_success": {
-          "mean": 0.0625,
-          "sd": 0.07978559231302818,
-          "values": [
-            0.0,
-            0.0,
-            0.16666666666666666,
-            0.08333333333333333
-          ]
-        },
-        "heldout_supported_success": {
-          "mean": 0.0,
-          "sd": 0.0,
-          "values": [
-            0.0,
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        "heldout_scaffold_free_mean_tokens": {
-          "mean": 8017.145833333334,
-          "sd": 188.40711896542516,
-          "values": [
-            8216.083333333334,
-            8128.833333333333,
-            7806.166666666667,
-            7917.5
-          ]
-        },
-        "heldout_supported_mean_tokens": {
-          "mean": 14236.708333333334,
-          "sd": 88.22568125740563,
-          "values": [
-            14195.333333333334,
-            14134.583333333334,
-            14329.833333333334,
-            14287.083333333334
-          ]
-        },
-        "initial_nll_gap": {
-          "mean": -0.844467480977376,
-          "sd": 0.05965053303722349,
-          "values": [
-            -0.896085262298584,
-            -0.7928086121877032,
-            -0.8961674372355137,
-            -0.7928086121877032
-          ]
-        },
-        "final_nll_gap": {
-          "mean": 0.3532377382119496,
-          "sd": 0.1819499154833486,
-          "values": [
-            0.20997973283131888,
-            0.5321923096974688,
-            0.4872653881708784,
-            0.18351352214813232
-          ]
-        },
-        "relative_nll_gap_reduction": {
-          "mean": -1.4201996876574845,
-          "sd": 0.22245721221880763,
-          "values": [
-            -1.2343300818191023,
-            -1.6712746323843772,
-            -1.5437213716155418,
-            -1.2314726648109169
-          ]
-        },
-        "final_active_cards": {
-          "mean": 6.0,
-          "sd": 0.0,
-          "values": [
-            6.0,
-            6.0,
-            6.0,
-            6.0
-          ]
-        },
-        "wall_hours": {
-          "mean": 1.7126884565088485,
-          "sd": 0.011569827981462276,
-          "values": [
-            1.7075508279270597,
-            1.7300291302469042,
-            1.7064616145690281,
-            1.7067122532924017
-          ]
-        },
-        "absolute_nll_gap": {
-          "initial_mean": 0.844467480977376,
-          "final_mean": 0.3532377382119496,
-          "mean_reduction": 0.5798003123425155,
-          "pooled_reduction": 0.5817035632880538,
-          "per_seed_reduction": [
-            0.7656699181808977,
-            0.32872536761562265,
-            0.4562786283844583,
-            0.7685273351890832
+            0.02266595868959742,
+            0.00021278477369779392,
+            0.0982366374424617,
+            0.02773985918278965,
+            0.15004421447833627
           ]
         },
         "rollout_diversity": {
@@ -14574,7 +18722,307 @@
           "duplication_rate_mean": 0.0
         },
         "success_count": 3,
-        "evaluation_episodes": 48
+        "evaluation_episodes": 96
+      },
+      "adaptive": {
+        "heldout_scaffold_free_success": {
+          "mean": 0.0625,
+          "sd": 0.07386710503565985,
+          "values": [
+            0.16666666666666666,
+            0.0,
+            0.16666666666666666,
+            0.08333333333333333,
+            0.08333333333333333,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "heldout_supported_success": {
+          "mean": 0.03125,
+          "sd": 0.06200198409523708,
+          "values": [
+            0.16666666666666666,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.08333333333333333,
+            0.0,
+            0.0
+          ]
+        },
+        "heldout_scaffold_free_mean_tokens": {
+          "mean": 8167.864583333333,
+          "sd": 151.17244789635495,
+          "values": [
+            8210.5,
+            8128.833333333333,
+            7873.0,
+            8036.833333333333,
+            8253.916666666666,
+            8221.916666666666,
+            8274.5,
+            8343.416666666666
+          ]
+        },
+        "heldout_supported_mean_tokens": {
+          "mean": 13981.375,
+          "sd": 483.6819042757434,
+          "values": [
+            12917.0,
+            14134.583333333334,
+            14280.833333333334,
+            14202.166666666666,
+            14251.0,
+            13601.583333333334,
+            14218.416666666666,
+            14245.416666666666
+          ]
+        },
+        "initial_nll_gap": {
+          "mean": -0.8418241838614143,
+          "sd": 0.04271129227278003,
+          "values": [
+            -0.896085262298584,
+            -0.7928086121877032,
+            -0.8961674372355137,
+            -0.7928086121877032,
+            -0.8132731914520264,
+            -0.8340005079905186,
+            -0.8754378159840899,
+            -0.8340120315551758
+          ]
+        },
+        "final_nll_gap": {
+          "mean": 0.23098088800907135,
+          "sd": 0.17454208755793596,
+          "values": [
+            0.2913320859273272,
+            0.5321923096974688,
+            0.1879132588704433,
+            -0.04420705636342426,
+            0.14731991291046143,
+            0.3923806349436445,
+            0.1919717788696289,
+            0.14894417921702097
+          ]
+        },
+        "relative_nll_gap_reduction": {
+          "mean": -1.2749768969102646,
+          "sd": 0.21798890058257417,
+          "values": [
+            -1.3251164796305428,
+            -1.6712746323843772,
+            -1.2096854349563468,
+            -0.9442399392692798,
+            -1.1811444351773541,
+            -1.4704800910602147,
+            -1.2192865962202366,
+            -1.1785875665837648
+          ]
+        },
+        "final_active_cards": {
+          "mean": 5.0,
+          "sd": 0.5345224838248488,
+          "values": [
+            5.0,
+            5.0,
+            5.0,
+            4.0,
+            6.0,
+            5.0,
+            5.0,
+            5.0
+          ]
+        },
+        "wall_hours": {
+          "mean": 1.6438347483591902,
+          "sd": 0.0680459860948527,
+          "values": [
+            1.6738854905631808,
+            1.730766266187032,
+            1.6680789974000718,
+            1.516503477692604,
+            1.7093328072627385,
+            1.6003688887092802,
+            1.6386372839079963,
+            1.613104775150617
+          ]
+        },
+        "absolute_nll_gap": {
+          "initial_mean": 0.8418241838614143,
+          "final_mean": 0.24203265209992741,
+          "mean_reduction": 0.7110830879070553,
+          "pooled_reduction": 0.7124902601517895,
+          "per_seed_reduction": [
+            0.6748835203694572,
+            0.32872536761562265,
+            0.7903145650436532,
+            0.9442399392692798,
+            0.818855564822646,
+            0.5295199089397853,
+            0.7807134037797634,
+            0.8214124334162352
+          ]
+        },
+        "rollout_diversity": {
+          "unique_sequences_per_group_mean": 8.0,
+          "duplication_rate_mean": 0.0
+        },
+        "success_count": 6,
+        "evaluation_episodes": 96
+      },
+      "adaptive_retain": {
+        "heldout_scaffold_free_success": {
+          "mean": 0.0625,
+          "sd": 0.05892556509887896,
+          "values": [
+            0.0,
+            0.0,
+            0.16666666666666666,
+            0.08333333333333333,
+            0.08333333333333333,
+            0.08333333333333333,
+            0.0,
+            0.08333333333333333
+          ]
+        },
+        "heldout_supported_success": {
+          "mean": 0.010416666666666666,
+          "sd": 0.02946278254943948,
+          "values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.08333333333333333,
+            0.0,
+            0.0
+          ]
+        },
+        "heldout_scaffold_free_mean_tokens": {
+          "mean": 8115.802083333333,
+          "sd": 163.69707394712094,
+          "values": [
+            8216.083333333334,
+            8128.833333333333,
+            7806.166666666667,
+            7917.5,
+            8253.916666666666,
+            8173.833333333333,
+            8217.583333333334,
+            8212.5
+          ]
+        },
+        "heldout_supported_mean_tokens": {
+          "mean": 14150.677083333334,
+          "sd": 203.51981806262998,
+          "values": [
+            14195.333333333334,
+            14134.583333333334,
+            14329.833333333334,
+            14287.083333333334,
+            14251.0,
+            13674.833333333334,
+            14165.833333333334,
+            14166.916666666666
+          ]
+        },
+        "initial_nll_gap": {
+          "mean": -0.8418241838614143,
+          "sd": 0.04271129227278003,
+          "values": [
+            -0.896085262298584,
+            -0.7928086121877032,
+            -0.8961674372355137,
+            -0.7928086121877032,
+            -0.8132731914520264,
+            -0.8340005079905186,
+            -0.8754378159840899,
+            -0.8340120315551758
+          ]
+        },
+        "final_nll_gap": {
+          "mean": 0.3217331568400065,
+          "sd": 0.17302845350923063,
+          "values": [
+            0.20997973283131888,
+            0.5321923096974688,
+            0.4872653881708784,
+            0.18351352214813232,
+            0.14731991291046143,
+            0.5134555101394653,
+            0.3701436519622803,
+            0.1299952268600464
+          ]
+        },
+        "relative_nll_gap_reduction": {
+          "mean": -1.3820342483309849,
+          "sd": 0.20772128534290665,
+          "values": [
+            -1.2343300818191023,
+            -1.6712746323843772,
+            -1.5437213716155418,
+            -1.2314726648109169,
+            -1.1811444351773541,
+            -1.6156537139007385,
+            -1.422809758961803,
+            -1.1558673279780451
+          ]
+        },
+        "final_active_cards": {
+          "mean": 6.0,
+          "sd": 0.0,
+          "values": [
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0,
+            6.0
+          ]
+        },
+        "wall_hours": {
+          "mean": 1.703842308719953,
+          "sd": 0.015953787804520243,
+          "values": [
+            1.7075508279270597,
+            1.7300291302469042,
+            1.7064616145690281,
+            1.7067122532924017,
+            1.7157356167501874,
+            1.6989463384283914,
+            1.6813231713904275,
+            1.6839795171552234
+          ]
+        },
+        "absolute_nll_gap": {
+          "initial_mean": 0.8418241838614143,
+          "final_mean": 0.3217331568400065,
+          "mean_reduction": 0.6179657516690151,
+          "pooled_reduction": 0.6178143096766011,
+          "per_seed_reduction": [
+            0.7656699181808977,
+            0.32872536761562265,
+            0.4562786283844583,
+            0.7685273351890832,
+            0.818855564822646,
+            0.38434628609926147,
+            0.577190241038197,
+            0.8441326720219547
+          ]
+        },
+        "rollout_diversity": {
+          "unique_sequences_per_group_mean": 8.0,
+          "duplication_rate_mean": 0.0
+        },
+        "success_count": 6,
+        "evaluation_episodes": 96
       }
     },
     "threshold_0.00": {
@@ -15389,6 +19837,46 @@
     },
     {
       "campaign": "primary",
+      "condition": "none",
+      "seed": 4,
+      "run_id": "06706624-548e-4de1-a796-c5154b2d6afe",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.188232924805747
+    },
+    {
+      "campaign": "primary",
+      "condition": "none",
+      "seed": 5,
+      "run_id": "baa55a41-6ecc-43c4-a804-0e0410e1fef2",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.221894773973359
+    },
+    {
+      "campaign": "primary",
+      "condition": "none",
+      "seed": 6,
+      "run_id": "681ca3cb-60b6-410b-adf2-b1fc44a3dd6e",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.204242119524214
+    },
+    {
+      "campaign": "primary",
+      "condition": "none",
+      "seed": 7,
+      "run_id": "bc57b0ca-f53c-47d0-aa13-a04b68ca6e4f",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.213897420366605
+    },
+    {
+      "campaign": "primary",
       "condition": "static",
       "seed": 0,
       "run_id": "0bd69902-17bf-4528-a21a-ede75e6c9959",
@@ -15426,6 +19914,46 @@
       "backend": "kubernetes",
       "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
       "wall_hours": 1.4450194001197816
+    },
+    {
+      "campaign": "primary",
+      "condition": "static",
+      "seed": 4,
+      "run_id": "a07728e2-6f30-4cae-b1a3-985a2e75ee27",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.4515895119640563
+    },
+    {
+      "campaign": "primary",
+      "condition": "static",
+      "seed": 5,
+      "run_id": "ae48c28f-4ed9-496a-bf42-92bfe904188c",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.439977265463935
+    },
+    {
+      "campaign": "primary",
+      "condition": "static",
+      "seed": 6,
+      "run_id": "98d52214-4cd1-46ff-a414-54ef66d65b79",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.4424201780557633
+    },
+    {
+      "campaign": "primary",
+      "condition": "static",
+      "seed": 7,
+      "run_id": "3583de14-7219-40cf-876f-5290b9e4186a",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.4386162762509451
     },
     {
       "campaign": "primary",
@@ -15469,6 +19997,46 @@
     },
     {
       "campaign": "primary",
+      "condition": "adaptive",
+      "seed": 4,
+      "run_id": "9ff6a77d-b552-432f-ba18-b6e6fb8e8050",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.7093328072627385
+    },
+    {
+      "campaign": "primary",
+      "condition": "adaptive",
+      "seed": 5,
+      "run_id": "4e991d74-5899-470a-986a-6227192aabc7",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.6003688887092802
+    },
+    {
+      "campaign": "primary",
+      "condition": "adaptive",
+      "seed": 6,
+      "run_id": "d25d43cc-3b04-4e1f-a4d1-9c1ec14570b2",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.6386372839079963
+    },
+    {
+      "campaign": "primary",
+      "condition": "adaptive",
+      "seed": 7,
+      "run_id": "bf0aad98-077b-45d5-a907-e4fc67aba300",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.613104775150617
+    },
+    {
+      "campaign": "primary",
       "condition": "adaptive_retain",
       "seed": 0,
       "run_id": "554407bf-4f38-4d03-97a2-97f3ab18df22",
@@ -15506,6 +20074,46 @@
       "backend": "kubernetes",
       "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
       "wall_hours": 1.7067122532924017
+    },
+    {
+      "campaign": "primary",
+      "condition": "adaptive_retain",
+      "seed": 4,
+      "run_id": "d126b2ad-4c9c-4c1e-b99f-dc060ec85544",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.7157356167501874
+    },
+    {
+      "campaign": "primary",
+      "condition": "adaptive_retain",
+      "seed": 5,
+      "run_id": "b1366124-4713-4c4b-a369-e07f6d0bc6d5",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.6989463384283914
+    },
+    {
+      "campaign": "primary",
+      "condition": "adaptive_retain",
+      "seed": 6,
+      "run_id": "3d338ead-851a-433f-beab-0ec0d8f1090e",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.6813231713904275
+    },
+    {
+      "campaign": "primary",
+      "condition": "adaptive_retain",
+      "seed": 7,
+      "run_id": "0d3b6e18-857c-430b-ac18-2ec35c243fee",
+      "subset_sha256": "8a272a841f27a8e1",
+      "backend": "kubernetes",
+      "gpu_model": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "wall_hours": 1.6839795171552234
     },
     {
       "campaign": "threshold_0.00",

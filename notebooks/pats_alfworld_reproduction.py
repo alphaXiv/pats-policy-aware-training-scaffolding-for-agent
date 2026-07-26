@@ -73,6 +73,13 @@ def _(mo, results):
     mo.vstack(
         [
             mo.md("## Verdict and primary result"),
+            mo.md(
+                "**Partially reproduced.** Adaptive removal reached 6/96 "
+                "scaffold-free successes, versus 4/96 without scaffolding and "
+                "3/96 with static cards, but tied retained policy-aware cards "
+                "at 6/96. The named comparisons align directionally; the "
+                "specific benefit of removal remains unresolved."
+            ),
             mo.ui.table(rows, selection=None),
         ]
     )
@@ -90,7 +97,7 @@ def _(mo):
         f"""
         ![Held-out scaffold-free success by training condition]({headline_url})
 
-        Bars average four matched seeds; dots are individual seeds and whiskers are
+        Bars average eight matched seeds; dots are individual seeds and whiskers are
         seed standard deviations. Every seed uses the same 12 held-out task files,
         and cards are hidden for this evaluation.
         """
@@ -175,10 +182,13 @@ def _(mo):
             ),
             mo.md(
                 f"""
-                ![Unique rollout sequences per group]({diversity_url})
+                ![Complete-trajectory and action-distribution diversity]({diversity_url})
 
-                Diversity is measured from complete action sequences within each
-                group, rather than from token-level variation.
+                The left panel shows a complete-trajectory ceiling: every arm has
+                8/8 unique sequences and 0% duplication. The right panel adds
+                post-warm-up action entropy; adaptive removal is only 0.005 nats
+                above retained cards, so this is weak directional evidence rather
+                than a clear diversity advantage.
                 """
             ),
         ]
@@ -239,7 +249,7 @@ def _(mo):
         full 150-step campaign or its WebShop and search experiments. The public
         expert trace is stronger and more oracle-like than the paper's learned
         experience bank, while the candidate-action policy is narrower than free
-        text generation. Four seeds and 12 held-out tasks expose large binomial and
+        text generation. Eight seeds and 12 held-out tasks expose large binomial and
         training variance, so effect sizes should be read as evidence for this
         reconstruction only.
         """
