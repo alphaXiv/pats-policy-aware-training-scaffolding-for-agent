@@ -1,5 +1,5 @@
 {
-  "condition": "none",
+  "condition": "static",
   "seed": 0,
   "model": "Qwen/Qwen2.5-1.5B-Instruct",
   "train_tasks_per_family": 1,
