@@ -513,6 +513,17 @@ def main() -> None:
     started = time.time()
     with (ROOT / "experiment_config.json").open() as handle:
         run_config = json.load(handle)
+    if condition_override := os.environ.get("PATS_CONDITION"):
+        if condition_override not in {
+            "none",
+            "static",
+            "adaptive",
+            "adaptive_retain",
+        }:
+            raise ValueError(f"Unsupported PATS_CONDITION={condition_override!r}")
+        run_config["condition"] = condition_override
+    if seed_override := os.environ.get("PATS_SEED"):
+        run_config["seed"] = int(seed_override)
     if run_config.get("smoke"):
         run_config.update(
             iterations=1,
