@@ -16,7 +16,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 import yaml
-from alfworld.agents.environment import get_environment
+from alfworld.agents.environment.alfred_tw_env import AlfredTWEnv
 from peft import LoraConfig, get_peft_model
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -94,7 +94,7 @@ def collect_fixed_tasks(
     split: str,
     per_family: int,
 ) -> list[str]:
-    manager = get_environment(config["env"]["type"])(config, train_eval=split)
+    manager = AlfredTWEnv(config, train_eval=split)
     grouped: dict[str, list[str]] = defaultdict(list)
     for game_file in sorted(manager.game_files):
         grouped[family_from_path(game_file)].append(game_file)
@@ -108,7 +108,7 @@ def collect_fixed_tasks(
 
 
 def make_task_env(config: dict[str, Any], split: str, game_file: str):
-    manager = get_environment(config["env"]["type"])(config, train_eval=split)
+    manager = AlfredTWEnv(config, train_eval=split)
     manager.game_files = [game_file]
     manager.num_games = 1
     return manager.init_env(batch_size=1)
