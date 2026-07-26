@@ -521,7 +521,13 @@ def main() -> None:
         visible_gpus=torch.cuda.device_count(),
         torch=torch.__version__,
     )
-    env_config = load_env_config(int(run_config["max_env_steps"]))
+    rollout_horizon = int(run_config["max_env_steps"])
+    environment_horizon = (
+        max(50, rollout_horizon)
+        if bool(run_config.get("expert_trace_cards", False))
+        else rollout_horizon
+    )
+    env_config = load_env_config(environment_horizon)
     env_config["_run"] = run_config
     train_files = collect_fixed_tasks(
         env_config, "train", int(run_config["train_tasks_per_family"])
