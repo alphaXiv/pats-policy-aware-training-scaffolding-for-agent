@@ -549,7 +549,7 @@ def main() -> None:
         for env, path in zip(train_envs, train_files):
             family = family_from_path(path)
             cards[family], won, trace_steps = audited_expert_card(
-                env, family, int(run_config["max_env_steps"]) * 3
+                env, family, max(50, int(run_config["max_env_steps"]) * 3)
             )
             emit(
                 "audited_expert_card",
