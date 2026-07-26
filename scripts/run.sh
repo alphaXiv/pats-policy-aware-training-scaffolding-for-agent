@@ -7,7 +7,7 @@ export TOKENIZERS_PARALLELISM=false
 export PYTHONUNBUFFERED=1
 
 apt-get update -qq
-DEBIAN_FRONTEND=noninteractive apt-get install -y -qq build-essential libgl1
+DEBIAN_FRONTEND=noninteractive apt-get install -y -qq build-essential libgl1 libglib2.0-0
 python -m pip install --disable-pip-version-check -r requirements.txt
 if [ ! -f "${ALFWORLD_DATA}/logic/alfred.pddl" ]; then
   alfworld-download
