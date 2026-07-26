@@ -1,6 +1,6 @@
 {
-  "condition": "none",
-  "seed": 0,
+  "condition": "adaptive",
+  "seed": 2,
   "model": "Qwen/Qwen2.5-1.5B-Instruct",
   "train_tasks_per_family": 1,
   "eval_tasks_per_family": 2,
