@@ -1,6 +1,6 @@
 {
   "condition": "none",
-  "seed": 0,
+  "seed": 4,
   "model": "Qwen/Qwen2.5-1.5B-Instruct",
   "train_tasks_per_family": 1,
   "eval_tasks_per_family": 2,
@@ -9,7 +9,7 @@
   "max_env_steps": 20,
   "max_candidates": 18,
   "temperature": 0.4,
-  "learning_rate": 1e-6,
+  "learning_rate": 0.000001,
   "max_update_decisions": 96,
   "lora_rank": 16,
   "adaptive_remove": true,
