@@ -279,6 +279,29 @@ def extract_expert_action(info: dict[str, Any]) -> str | None:
     return None
 
 
+def audited_expert_card(env, family: str, max_steps: int) -> tuple[str, bool, int]:
+    _, info = env.reset()
+    actions: list[str] = []
+    won = False
+    for _ in range(max_steps):
+        action = extract_expert_action(info)
+        if not action:
+            break
+        _, _, dones, info = env.step([action])
+        actions.append(action)
+        won = bool(info.get("won", [False])[0])
+        if won or bool(dones[0]):
+            break
+    if won:
+        trace = " → ".join(actions)
+        card = (
+            f"{BASE_CARDS[family]} Audited successful public-environment trace "
+            f"for this training task: {trace}."
+        )
+        return card[:1500], True, len(actions)
+    return BASE_CARDS[family], False, len(actions)
+
+
 def rollout(
     policy: CandidatePolicy,
     env,
@@ -522,6 +545,19 @@ def main() -> None:
         make_task_env(env_config, "train", path) for path in train_files
     ]
     cards = dict(BASE_CARDS)
+    if bool(run_config.get("expert_trace_cards", False)):
+        for env, path in zip(train_envs, train_files):
+            family = family_from_path(path)
+            cards[family], won, trace_steps = audited_expert_card(
+                env, family, int(run_config["max_env_steps"]) * 3
+            )
+            emit(
+                "audited_expert_card",
+                family=family,
+                trace_success=won,
+                trace_steps=trace_steps,
+                card_characters=len(cards[family]),
+            )
     active = {family: run_config["condition"] != "none" for family in TASK_FAMILIES}
     competence = {family: 0.0 for family in TASK_FAMILIES}
     generator = torch.Generator(device=policy.device)
