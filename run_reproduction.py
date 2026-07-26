@@ -114,7 +114,12 @@ def make_task_env(config: dict[str, Any], split: str, game_file: str):
     return manager.init_env(batch_size=1)
 
 
-def normalize_commands(commands: list[str], max_candidates: int, goal: str) -> list[str]:
+def normalize_commands(
+    commands: list[str],
+    max_candidates: int,
+    goal: str,
+    evidence: str | None = None,
+) -> list[str]:
     commands = sorted(set(str(x).strip() for x in commands if str(x).strip()))
     if len(commands) <= max_candidates:
         return commands
@@ -125,11 +130,14 @@ def normalize_commands(commands: list[str], max_candidates: int, goal: str) -> l
     }
     anchors = ("look", "inventory", "open", "close", "take", "put", "go to", "clean", "heat", "cool", "use")
 
-    def priority(command: str) -> tuple[int, int, str]:
+    evidence_text = (evidence or "").lower()
+
+    def priority(command: str) -> tuple[int, int, int, str]:
         lower = command.lower()
+        evidence_match = int(lower in evidence_text)
         overlap = sum(word in lower for word in words)
         anchored = sum(lower.startswith(anchor) for anchor in anchors)
-        return (-overlap, -anchored, lower)
+        return (-evidence_match, -overlap, -anchored, lower)
 
     kept = sorted(commands, key=priority)[:max_candidates]
     for essential in ("look", "inventory"):
@@ -325,7 +333,9 @@ def rollout(
     invalid = 0
     won = False
     for _ in range(max_steps):
-        commands = normalize_commands(list(info["admissible_commands"][0]), max_candidates, goal)
+        commands = normalize_commands(
+            list(info["admissible_commands"][0]), max_candidates, goal, card
+        )
         prompt = build_prompt(goal, observation, history, commands, card)
         prompt_tokens += len(policy.tokenizer.encode(prompt, add_special_tokens=False))
         choice, _, entropy = policy.choose(
@@ -410,8 +420,12 @@ def build_diagnostic_records(
     for env, path in zip(envs, task_files):
         obs, info = env.reset()
         goal = str(obs[0])
-        commands = normalize_commands(list(info["admissible_commands"][0]), max_candidates, goal)
+        raw_commands = list(info["admissible_commands"][0])
         expert = extract_expert_action(info)
+        commands = normalize_commands(raw_commands, max_candidates, goal)
+        if expert and expert in raw_commands and expert not in commands:
+            commands[-1] = expert
+            commands = sorted(set(commands))
         if expert and expert in commands:
             records.append(
                 {
@@ -626,10 +640,18 @@ def main() -> None:
             if (
                 run_config["condition"] == "adaptive"
                 and bool(run_config["adaptive_remove"])
-                and iteration >= 2
-                and competence[family] >= 0.30
+                and active[family]
+                and iteration >= int(run_config.get("adaptive_remove_after", 2))
+                and competence[family]
+                >= float(run_config.get("adaptive_threshold", 0.30))
             ):
                 active[family] = False
+                emit(
+                    "card_removed",
+                    step=iteration,
+                    family=family,
+                    competence=competence[family],
+                )
         dynamics = {
             "step": iteration,
             "train_success": mean_success,
@@ -643,7 +665,7 @@ def main() -> None:
         }
         all_dynamics.append(dynamics)
         emit("training_step", **dynamics)
-        if iteration in {2, 4, int(run_config["iterations"])}:
+        if iteration in {2, 4, 8, 12, int(run_config["iterations"])}:
             gap = likelihood_gap(policy, diagnostic, cards)
             checkpoints.append({"step": iteration, **gap})
             emit("checkpoint", step=iteration, active_cards=sum(active.values()), **gap)
